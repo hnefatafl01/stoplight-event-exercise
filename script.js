@@ -17,19 +17,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
   stop.addEventListener('click', function () {
     var stoplight = document.getElementById('stopLight');
-    stoplight.style.backgroundColor = 'red';
+        var light = stoplight.style.backgroundColor;
+    if (light !== 'red') {
+        stoplight.style.backgroundColor = 'red';
+    } else {
+        stoplight.style.backgroundColor = '#111';
+    }
   });
 
   var slow = document.getElementById('slowButton');
   slow.addEventListener('click', function () {
     var slowLight = document.getElementById('slowLight');
-    slowLight.style.backgroundColor = 'yellow';
+    var light = slowLight.style.backgroundColor;
+    if (light !== 'yellow') {
+        slowLight.style.backgroundColor = 'yellow';
+    } else {
+        slowLight.style.backgroundColor = '#111';
+    }
   });
 
   var go = document.getElementById('goButton');
   go.addEventListener('click', function () {
     var goLight = document.getElementById('goLight');
-    goLight.style.backgroundColor = 'green';
+    var light = goLight.style.backgroundColor;
+    if (light !== 'green') {
+        goLight.style.backgroundColor = 'green';
+    } else {
+        goLight.style.backgroundColor = '#111';
+    }
   });
 });
 
